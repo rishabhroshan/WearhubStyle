@@ -1,0 +1,235 @@
+/* ===========================
+   RESPONSIVE.CSS
+   Breakpoints: 992px (tablet), 768px (mobile), 480px (small mobile)
+=========================== */
+
+/* ---------- Hamburger menu button (hidden on desktop) ---------- */
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #111827;
+    cursor: pointer;
+}
+
+/* ===========================
+   TABLET (<= 992px)
+=========================== */
+
+@media (max-width: 992px) {
+
+    .menu-toggle {
+        display: block;
+        order: 2;
+    }
+
+    .navbar-brand {
+        order: 1;
+    }
+
+    .navbar .d-flex {
+        order: 3;
+    }
+
+    .navbar-nav {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        background: #fff;
+        padding: 15px 0;
+        order: 4;
+        gap: 0;
+    }
+
+    .navbar-nav.show {
+        display: flex;
+    }
+
+    .navbar-nav li {
+        width: 100%;
+    }
+
+    .nav-link {
+        display: block;
+        width: 100%;
+        padding: 12px 5px !important;
+        border-bottom: 1px solid #f1f1f1;
+        margin: 0;
+    }
+
+    .hero h1 {
+        font-size: 46px;
+    }
+
+    .category-box .box {
+        width: 47%;
+    }
+
+    .product-box .card {
+        width: 47%;
+    }
+
+    .feature-box {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .testimonial-box {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+}
+
+/* ===========================
+   MOBILE (<= 768px)
+=========================== */
+
+@media (max-width: 768px) {
+
+    .hero {
+        min-height: auto;
+        padding: 60px 6%;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .category-box .box {
+        width: 100%;
+    }
+
+    .product-box .card {
+        width: 100%;
+    }
+
+    .feature-box,
+    .feature-container {
+        grid-template-columns: 1fr !important;
+    }
+
+    .testimonial-box {
+        grid-template-columns: 1fr !important;
+    }
+
+    .about {
+        grid-template-columns: 1fr !important;
+        padding: 30px;
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr) !important;
+        padding: 30px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-col a {
+        margin: 6px auto;
+    }
+
+    #product-details {
+        flex-direction: column;
+    }
+
+    #product-details img {
+        width: 100%;
+        height: auto;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .track-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .track-box input {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .filter-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .section-title {
+        font-size: 32px;
+    }
+
+    .auth-box {
+        padding: 25px;
+    }
+
+    .navbar-brand {
+        font-size: 24px;
+    }
+
+}
+
+/* ===========================
+   SMALL MOBILE (<= 480px)
+=========================== */
+
+@media (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-buttons a {
+        text-align: center;
+    }
+
+    .about-hero h1 {
+        font-size: 34px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr !important;
+    }
+
+    .navbar {
+        padding: 12px 4% !important;
+    }
+
+    .search-box input {
+        width: 100%;
+    }
+
+}

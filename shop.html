@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shop - WearhubStyle</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+
+            <a href="index.html" class="navbar-brand" style="text-decoration:none;">WearhubStyle</a>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class="navbar-nav" id="navbar-nav">
+                <li><a class="nav-link" href="index.html">Home</a></li>
+                <li><a class="nav-link active" href="shop.html">Shop</a></li>
+                <li><a class="nav-link" href="about.html">About</a></li>
+                <li><a class="nav-link" href="contact.html">Contact</a></li>
+                <li><a class="nav-link" href="tracking.html">Track Order</a></li>
+                <li><a class="nav-link" href="faq.html">FAQ</a></li>
+            </ul>
+
+            <div class="d-flex">
+                <a href="login.html" id="account-link" aria-label="Account">
+                    <i class="fa-regular fa-user"></i> Login
+                </a>
+                <a href="wishlist.html" aria-label="Wishlist">
+                    <i class="fa-regular fa-heart"></i> (<span id="wishlist-count">0</span>)
+                </a>
+                <a href="cart.html" aria-label="Cart">
+                    <i class="fa-solid fa-cart-shopping"></i> (<span id="cart-count">0</span>)
+                </a>
+            </div>
+
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <div class="search-box">
+            <input type="text" id="search" placeholder="Search Products......" onkeyup="searchProduct()">
+        </div>
+
+        <div class="filter-box">
+
+            <select id="category" onchange="filterCategory()">
+
+                <option value="all">All Categories</option>
+                <option value="beauty">Beauty</option>
+                <option value="fragrances">Fragrances</option>
+                <option value="furniture">Furniture</option>
+                <option value="groceries">Groceries</option>
+
+            </select>
+
+            <div class="sort-box">
+                <select id="sort" onchange="sortProducts()">
+                    <option value="default">Sort By</option>
+                    <option value="low">Price: Low to High</option>
+                    <option value="high">Price: High to Low</option>
+                </select>
+            </div>
+
+        </div>
+
+        <h1 style="text-align:center; margin-top:40px;">All Products</h1>
+
+        <div id="products"></div>
+
+    </div>
+
+
+    <div id="toast" class="toast-box">
+        Product Added To Cart
+    </div>
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-col">
+                <h2>WearhubStyle</h2>
+                <p>
+                    Your one-stop destination for premium fashion.
+                    Discover trendy collections for every occasion.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="about.html">About Us</a>
+                <a href="tracking.html">Track Order</a>
+            </div>
+
+            <div class="footer-col">
+                <h3>Support</h3>
+                <a href="contact.html">Contact</a>
+                <a href="faq.html">FAQ</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </div>
+
+            <div class="footer-col">
+                <h3>Contact</h3>
+                <p>📍 Prayagraj, Uttar Pradesh</p>
+                <p>📧 support@WearhubStyle.com</p>
+                <p>📞 +91 9876543210</p>
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+
+        <p class="copyright">
+            © 2026 WearhubStyle | Designed & Developed by <strong>Rishabh Roshan</strong>
+        </p>
+
+    </footer>
+
+    <script src="js/store.js"></script>
+    <script src="js/api.js"></script>
+</body>
+
+</html>
