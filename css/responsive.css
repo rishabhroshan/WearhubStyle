@@ -3,6 +3,13 @@
    Breakpoints: 992px (tablet), 768px (mobile), 480px (small mobile)
 =========================== */
 
+/* Prevent any element from ever causing horizontal scroll,
+   which was making the footer look narrower than the screen */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 /* ---------- Hamburger menu button (hidden on desktop) ---------- */
 
 .menu-toggle {
@@ -58,6 +65,20 @@
         padding: 12px 5px !important;
         border-bottom: 1px solid #f1f1f1;
         margin: 0;
+    }
+
+    .navbar {
+        row-gap: 8px;
+        padding: 12px 5% !important;
+    }
+
+    .navbar .d-flex {
+        gap: 22px !important;
+        font-size: 15px;
+    }
+
+    .navbar .d-flex a i {
+        margin-right: 5px;
     }
 
     .hero h1 {
